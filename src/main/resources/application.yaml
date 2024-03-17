@@ -1,0 +1,24 @@
+spring:
+  config:
+    import: optional:secret.yaml
+    
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_reddit_clone
+    username: root
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    
+  mail:
+    host: smtp.mailtrap.io
+    protocol: smtp
+
+jwt:
+  expiration:
+    time: 900000
